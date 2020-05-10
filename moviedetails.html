@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Movie Website</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="./currencyconverter.html">
+                <img style="width: 50px; height: 50px;" class="ml-5" src="./Asset/logo.png" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 offset-md-1">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./currencyconverter.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Hindi Movie</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">English Movie</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Movie with Title" aria-label="Search" id="search_movie">
+                    <button class="btn btn-outline-success" type="submit" data-toggle="modal" data-toggle="tooltip" data-target="#exampleModalScrollable" data-placement="bottom" title="Search Movie with title" id="search">Search</button>
+                    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header font-weight-bold text-primary">
+                                    <h5 class="modal-title" id="movie_title" id="exampleModalScrollableTitle">war</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <center>
+                                        <img id="poster"  alt="">
+                                        <div class="d-flex flex-row justify-content-center mt-5"> 
+                                            <p>Type:</p>
+                                            <p id="type" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Gener:</p>
+                                            <p id="gener" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Director:</p>
+                                            <p id="director" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Production:</p>
+                                            <p id="production" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Actor:</p>
+                                            <p id="actor" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Writer:</p>
+                                            <p id="writer" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Release Date:</p>
+                                            <p id="release_date" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Runing Time:</p>
+                                            <p id="runing_time" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>country:</p>
+                                            <p id="country" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>language:</p>
+                                            <p id="language" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Box Office:</p>
+                                            <p id="box_office" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Awards:</p>
+                                            <p id="awards" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>IMDB Rating:</p>
+                                            <p id="imdb_rating" class="ml-3"></p>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center"> 
+                                            <p>Plot:</p>
+                                            <p id="Plot" class="ml-3"></p>
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid row mt-1">
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 bg-dark">
+            <div class="mt-5 pt-5 text-center">
+            <h1 class="text-white">welcome to Prime Movie Information</h1>
+            <h5 class="text-white mt-3">Join Us to Know Latest Movie, Tv Shows & Series information.</h5>
+            <select name="movie_selection" id="lng" class="bg-primary text-white border border-success mt-3 rounded" style="height: 50px;">
+                <option value="select">Select Language for start</option>
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+            </select>
+            </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 bg-dark">
+            <img class="img-fluid ml-3" src="./Asset/collection.jpg" alt="">
+        </div>
+    </div>
+    <div class="container-fluid row mt-1">
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 bg-dark">
+            <img class="img-fluid" src="./Asset/couple.jpg" alt="">
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 bg-dark">
+            <div class="mt-5 pt-5 text-center">
+            <h1 class="text-white">Great Knowladge</h1>
+            <h5 class="text-white mt-3">Join Us to Know Latest Movie, Tv Shows & Series information.</h5>
+            <select name="movie_selection" id="lng" class="bg-primary text-white border border-success mt-3 rounded" style="height: 50px;">
+                <option value="select">Select Language for start</option>
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+            </select>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid row mt-1">
+        <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 bg-dark">
+            <h1 class="text-white text-center pt-5">Did you Know About Movie?</h1>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 bg-dark">
+            <h2 class="ml-5 mt-5 text-white text-left">English Movie</h2>
+            <div class="mt-3 text-white">
+                <ul>
+                    <li>Avtar is a First movie to cross the US$ 2,000,000,000 mark worldwide</li>
+                    <li>Psycho Is the First U.S. Film to Feature a Toilet Flushing</li>
+                    <li>Paul Schrader Wrote Taxi Driver in Two Weeks</li>
+                    <li>The Most Profitable Film of All Time Is Paranormal Activity</li>
+                    <li>Harry Potter Has Brit Rock Cameos</li>
+                    <li>The Matrix Code Comes From Sushi</li>
+                    <li>Robert Downey, Jr. is One of the World's Oldest Superhero</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 bg-dark">
+            <h2 class="ml-5 mt-5 text-white text-left">Hindi Movie</h2>
+            <div class="mt-3 text-white">
+                <ul>
+                    <li>The phrase "Enna Rascala!" was never said by Rajinikanth.</li>
+                    <li>Lata Mangeshkar was made to sing "Pyaar kiya toh darna kya" in a bathroom.</li>
+                    <li>Dev Anand picked up his movie titles and story lines from newspaper headlines and stories.</li>
+                    <li>The story of "Gangs of Wasseypur" was written by Zeishan Quadri, who played the character of Definite in the film.</li>
+                    <li>2.7 billion movie tickets are bought by Indians annually which is the highest in the world.</li>
+                    <li>Amitabh Bachchan is ambidextrous, this means he can write well with both his hands.</li>
+                    <li>Shah Rukh Khan went to see the Taj Mahal with first salary</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid row mt-1">
+        <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 bg-dark">
+            <h1 class="text-white text-center pt-5">How Much you Know About Movie!!!</h1>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 bg-dark">
+            <h2 class="mt-5 text-white text-left offset-md-3">first submit movie name</h2>
+            <div class="d-flex flex-column text-white offset-md-3">
+               <input type="text" style="width: 300px;" class="form-control mr-sm-2" placeholder="enter movie name" id="game_moviename">
+               <button style="width: 150px;" class="btn btn-lg btn-warning btn-outline-success mt-3" type="submit" data-toggle="tooltip" data-placement="bottom" title="Enter Movie Name" id="game_movie">Submit</button>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 bg-dark pb-5">
+            <h2 class="mt-5 text-white text-left offset-md-3">Test your Knowladge</h2>
+            <div class="d-flex flex-column justify-content-center text-white offset-md-3">
+                <input style="width: 300px;" class="form-control mr-sm-2" type="text" placeholder="enter actor name" id="game_actor">
+                <input style="width: 300px;" class="form-control mr-sm-2 mt-3" type="text" placeholder="enter director name" id="game_director">
+                <input style="width: 300px;" class="form-control mr-sm-2 mt-3" type="text" placeholder="enter writer name" id="game_writer">
+                <input style="width: 300px;" class="form-control mr-sm-2 mt-3" type="text" placeholder="enter movie releasing year" id="game_release">
+                <button style="width: 150px;"  class="btn btn-lg btn-warning btn-outline-success mt-3" type="submit" data-toggle="tooltip" data-placement="bottom" title="Enter detail's" id="game_result">Get Result</button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-1">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 bg-dark">
+            <center>
+                <div class="d-flex flex-row justify-content-center pt-5">
+                    <img style="width: 25px; height: 25px;" class="rounded-pill" src="./Asset/fb.png" alt="">
+                    <img style="width: 25px; height: 25px;" class="rounded-pill ml-2" src="./Asset/insta.png" alt="">
+                    <img style="width: 25px; height: 25px;" class="rounded-pill ml-2" src="./Asset/twiteer.png" alt="">
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-3 text-white">
+                  <p>Home</p>
+                  <p class="ml-5">Hindi Movie</p>
+                  <p class="ml-5">English Movie</p>
+                  <P class="ml-5">Test Your Brain</P>
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-2 text-white">
+                    <h4>An prime information</h4>
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-2 text-white">
+                    <p>© 1990-2020 by PrimeInformation.com, Inc.</p>
+                </div>
+            </center>
+        </div>
+    </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./searchmovie.js"></script>
+</html>
